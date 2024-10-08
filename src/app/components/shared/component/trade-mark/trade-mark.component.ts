@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-trade-mark',
+  selector: 'trade-mark-component',
   standalone: true,
   imports: [],
   templateUrl: './trade-mark.component.html',
@@ -9,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class TradeMarkComponent {
 
+  @Input() imgSrc: string = '/assets/logo/logo.svg';
+  @Input() imgAlt: string = 'logo marca cotenbras';
+  @Input() logoText: string = 'Contebras';
 }
