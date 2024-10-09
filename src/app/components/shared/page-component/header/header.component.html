@@ -1,3 +1,14 @@
-<nav [ngClass]="'header container'">
-  <trade-mark-component></trade-mark-component>
-</nav>
+<menu-component
+navPrimaryClass=""
+ divPrimaryClass="menu-primary container" ulPrimaryClasses="menu-primary-itens font-1-x cor-0" [primaryNavItems]="[
+  { icon: '../../../../../assets/icon/email.svg',alt:'icone de email', label: 'Entre em contato conosco', link: 'contact' },
+  { icon: '../../../../../assets/icon/whatsapp.svg',alt:'icone de telefone', label: 'Fale conosco', link: 'contact' },
+  { icon: '../../../../../assets/icon/shopping-bag.svg',alt:'icone de compras', label: 'meus pedidos', link: 'courses' },
+]" navSecondaryClass="" divSecondaryClass="menu-secondary container" ulSecondaryClasses="menu-secondary-items font-1-x cor-y5" [secondaryNavItems]="[
+  { label: 'Sobre', link: 'about' },
+  { label: 'Contato', link: 'contact' },
+  { label: 'Área de aluno', link: 'contact' },
+]"
+primaryBgClass="menu-bg-primary" secondaryBgClass="menu-bg-secondary" ariaLabel="primary">
+
+  ></menu-component>

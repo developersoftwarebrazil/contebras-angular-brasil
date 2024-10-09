@@ -1,1 +1,25 @@
+<nav [ngClass]="[navPrimaryClass, primaryBgClass]" [attr.aria-label]="ariaLabel">
+  <div [ngClass]="divPrimaryClass">
+    <trade-mark-component></trade-mark-component>
+    <ul [ngClass]="ulPrimaryClasses">
+      <li *ngFor="let item of primaryNavItems" [ngClass]="item.classes">
+        <a [routerLink]="item.link">
+          <img [src]="item.icon" [alt]="item.alt">
+          {{item.label}}
+        </a>
 
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<nav [ngClass]="[navSecondaryClass, secondaryBgClass]" [attr.aria-label]="ariaLabel">
+  <div [ngClass]="divSecondaryClass">
+    <ul [ngClass]="ulSecondaryClasses">
+      <li *ngFor="let item of secondaryNavItems" [ngClass]="item.classes">
+        <a [routerLink]="item.link"></a>
+        {{item.label}}
+      </li>
+    </ul>
+  </div>
+</nav>
