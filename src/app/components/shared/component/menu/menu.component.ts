@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { TradeMarkComponent } from '../trade-mark/trade-mark.component';
 import { RouterModule } from '@angular/router';
+import { TradeMarkComponent } from '../trade-mark/trade-mark.component';
 
 @Component({
   selector: 'menu-component',
@@ -22,10 +22,11 @@ export class MenuComponent {
   @Input() divSecondaryClass!: string;
   @Input() ulPrimaryClasses!: string;
   @Input() ulSecondaryClasses!: string;
+  @Input() imgPrimaryClass!: string;
   @Input() ariaLabel!: string;
 
   // Items dos Menus
-  @Input() primaryNavItems: { icon: string,alt:string, label: string, link: string, classes?: string }[] = [];
+  @Input() primaryNavItems: { icon: string, alt: string, label: string, link: string, classes?: string }[] = [];
   @Input() secondaryNavItems: { label: string, link: string, classes?: string }[] = [];
 
   // Classes de background para menus

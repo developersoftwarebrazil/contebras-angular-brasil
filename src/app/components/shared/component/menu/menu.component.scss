@@ -3,15 +3,14 @@
 .menu-bg-primary {
   background: $black-12;
 }
-.menu-bg-secondary {
-  background: $yellow-2;
-}
 .menu-primary {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: $gap-large-width; // 40px
   justify-content: space-between;
+  //700px
+
 }
 .menu-primary-itens {
   display: flex;
@@ -42,8 +41,15 @@
     height: 1.5rem; // 24px
     margin-right: $margin-right-min-smallest-width; //8px
   }
+  @media (max-width: $large-screen-width) {
+    flex-direction: column;
+
+  }
 }
 
+.menu-bg-secondary {
+  background: $yellow-2;
+}
 .menu-secondary {
   display: flex;
   flex-wrap: wrap;
@@ -56,12 +62,20 @@
     gap: 20px;
     align-items: center;
   }
-}
 
+}
 .menu-secondary-items {
   display: flex;
   gap: 20px;
   margin-left: auto;
+}
+
+@media (max-width: $largest-screen-width) {
+  .menu-primary-image,
+  .menu-primary {
+    display: flex;
+    flex-direction: column;
+  }
 }
 //
 

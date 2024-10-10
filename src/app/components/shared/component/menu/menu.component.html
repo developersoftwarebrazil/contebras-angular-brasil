@@ -1,6 +1,8 @@
 <nav [ngClass]="[navPrimaryClass, primaryBgClass]" [attr.aria-label]="ariaLabel">
   <div [ngClass]="divPrimaryClass">
-    <trade-mark-component></trade-mark-component>
+    <div [ngClass]="imgPrimaryClass">
+      <trade-mark-component></trade-mark-component>
+    </div>
     <ul [ngClass]="ulPrimaryClasses">
       <li *ngFor="let item of primaryNavItems" [ngClass]="item.classes">
         <a [routerLink]="item.link">
